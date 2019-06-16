@@ -6,6 +6,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,8 @@ namespace CompanyWebsitePageFactory
         {
 
             IWebDriver driver = new ChromeDriver();
-            driver.Url = "https://www.linklaters.com/";
+            //driver.Url = "https://www.linklaters.com/";
+            driver.Url = ConfigurationManager.AppSettings["URL"];
 
             var homePage = new HomePage(driver);
             homePage.ClickOnNavInsights();
