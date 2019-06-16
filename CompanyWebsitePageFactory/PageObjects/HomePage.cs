@@ -15,7 +15,7 @@ namespace CompanyWebsitePageFactory.PageObjects
 
         [FindsBy(How = How.XPath, Using = "//div[@class='header__navDesktop']//a[contains(text(),'Insights')]")]
         [CacheLookup]
-        public IWebElement PNav_Insights { get; set; }
+        private IWebElement PNav_Insights { get; set; }
 
         [FindsBy(How = How.ClassName, Using = "icon-search")]
         [CacheLookup]
@@ -25,6 +25,11 @@ namespace CompanyWebsitePageFactory.PageObjects
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);
+        }
+
+        public void ClickOnNavInsights()
+        {
+            PNav_Insights.Click();
         }
 
 

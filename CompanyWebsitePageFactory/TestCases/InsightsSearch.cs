@@ -23,7 +23,7 @@ namespace CompanyWebsitePageFactory
             driver.Url = "https://www.linklaters.com/";
 
             var homePage = new HomePage(driver);
-            homePage.PNav_Insights.Click();
+            homePage.ClickOnNavInsights();
 
             var insights = new Insights(driver);
             insights.SearchAndReset();
