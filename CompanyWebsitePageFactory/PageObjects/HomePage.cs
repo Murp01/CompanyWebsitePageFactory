@@ -19,5 +19,6 @@ namespace CompanyWebsitePageFactory.PageObjects
         [FindsBy(How = How.ClassName, Using = "icon-search")]
         public IWebElement Btn_SiteSearch { get; set; }
 
+
     }
 }
