@@ -15,6 +15,22 @@ namespace CompanyWebsitePageFactory.PageObjects
         [FindsBy(How = How.XPath, Using = "//input[@placeholder='Name']")][CacheLookup]
         public IWebElement Input_Name { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Reset search')]")]
+        [CacheLookup]
+        public IWebElement Btn_Reset { get; set; }
+
+        public Insights(IWebDriver driver)
+        {
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);
+        }
+
+        public void SearchAndReset()
+        {
+            Input_Name.SendKeys("Linklaters");
+            Btn_Reset.Click();
+        }
+
 
     }
 }

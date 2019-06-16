@@ -22,13 +22,11 @@ namespace CompanyWebsitePageFactory
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://www.linklaters.com/";
 
-            var homePage = new HomePage();
-            PageFactory.InitElements(driver, homePage);
+            var homePage = new HomePage(driver);
             homePage.PNav_Insights.Click();
 
-            var insights = new Insights();
-            PageFactory.InitElements(driver, insights);
-            insights.Input_Name.SendKeys("Linklaters");
+            var insights = new Insights(driver);
+            insights.SearchAndReset();
 
         }
     }

@@ -21,6 +21,12 @@ namespace CompanyWebsitePageFactory.PageObjects
         [CacheLookup]
         public IWebElement Btn_SiteSearch { get; set; }
 
+        public HomePage(IWebDriver driver)
+        {
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);
+        }
+
 
     }
 }
