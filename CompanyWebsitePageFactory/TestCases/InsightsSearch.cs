@@ -6,6 +6,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,15 +21,14 @@ namespace CompanyWebsitePageFactory
         {
 
             IWebDriver driver = new ChromeDriver();
-            driver.Url = "https://www.linklaters.com/";
+            driver.Url = ConfigurationManager.AppSettings["URL"];
 
-            var homePage = new HomePage();
-            PageFactory.InitElements(driver, homePage);
-            homePage.PNav_Insights.Click();
+            var homePage = new HomePage(driver);
+            homePage.ClickOnNavInsights();
 
-            var insights = new Insights();
-            PageFactory.InitElements(driver, insights);
-            insights.Input_Name.SendKeys("Linklaters");
+            var insights = new Insights(driver);
+            insights.SearchAndReset();
+            //insights.SearchAndReset("Test");
 
         }
     }

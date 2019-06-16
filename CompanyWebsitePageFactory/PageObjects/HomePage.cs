@@ -14,10 +14,24 @@ namespace CompanyWebsitePageFactory.PageObjects
         private IWebDriver driver;
 
         [FindsBy(How = How.XPath, Using = "//div[@class='header__navDesktop']//a[contains(text(),'Insights')]")]
-        public IWebElement PNav_Insights { get; set; }
+        [CacheLookup]
+        private IWebElement PNav_Insights { get; set; }
 
         [FindsBy(How = How.ClassName, Using = "icon-search")]
+        [CacheLookup]
         public IWebElement Btn_SiteSearch { get; set; }
+
+        public HomePage(IWebDriver driver)
+        {
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);
+        }
+
+        public void ClickOnNavInsights()
+        {
+            PNav_Insights.Click();
+        }
+
 
     }
 }
