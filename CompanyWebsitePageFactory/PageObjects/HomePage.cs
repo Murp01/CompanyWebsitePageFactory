@@ -13,7 +13,11 @@ namespace CompanyWebsitePageFactory.PageObjects
     {
         private IWebDriver driver;
 
-        [FindsBy(How = How.ClassName, Using = "icon-search")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='header__navDesktop']//a[contains(text(),'Insights')]")]
         public IWebElement PNav_Insights { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "icon-search")]
+        public IWebElement Btn_SiteSearch { get; set; }
+
     }
 }

@@ -12,14 +12,10 @@ namespace CompanyWebsitePageFactory.PageObjects
     {
         private IWebDriver driver;
 
-        [FindsBy(How = How.Id, Using = "log")]
-        public IWebElement UserName { get; set; }
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Name']")]
+        public IWebElement Input_Name { get; set; }
 
-        [FindsBy(How = How.Id, Using = "pwd")]
-        public IWebElement Password { get; set; }
 
-        [FindsBy(How = How.Id, Using = "login")]
-        public IWebElement Submit { get; set; }
     }
 }
 
