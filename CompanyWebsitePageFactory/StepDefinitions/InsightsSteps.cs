@@ -3,9 +3,12 @@ using TechTalk.SpecFlow;
 
 namespace CompanyWebsitePageFactory.StepDefinitions
 {
+
     [Binding]
     public class InsightsSteps
     {
+
+
         [Given(@"I am on the Linklaters homepage")]
         public void GivenIAmOnTheLinklatersHomepage()
         {

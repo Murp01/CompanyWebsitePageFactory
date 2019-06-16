@@ -12,7 +12,7 @@ namespace CompanyWebsitePageFactory.PageObjects
     {
         private IWebDriver driver;
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Name']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Name']")][CacheLookup]
         public IWebElement Input_Name { get; set; }
 
 
