@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using CompanyWebsitePageFactory.TestDataAccess;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -25,10 +26,12 @@ namespace CompanyWebsitePageFactory.PageObjects
             PageFactory.InitElements(driver, this);
         }
 
-        public void SearchAndReset()
+        public void SearchAndReset(String testName)
         {
-            Input_Name.SendKeys("Linklaters");
-            Btn_Reset.Click();
+            var userData = ExcelDataAccess.GetTestData(testName);
+            Input_Name.SendKeys(userData.SearchTerm);
+            //Input_Name.SendKeys("Linklaters");
+            //Btn_Reset.Click();
         }
 
 

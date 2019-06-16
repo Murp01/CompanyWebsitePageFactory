@@ -21,14 +21,13 @@ namespace CompanyWebsitePageFactory
         {
 
             IWebDriver driver = new ChromeDriver();
-            //driver.Url = "https://www.linklaters.com/";
             driver.Url = ConfigurationManager.AppSettings["URL"];
 
             var homePage = new HomePage(driver);
             homePage.ClickOnNavInsights();
 
             var insights = new Insights(driver);
-            insights.SearchAndReset();
+            insights.SearchAndReset("Test");
 
         }
     }
