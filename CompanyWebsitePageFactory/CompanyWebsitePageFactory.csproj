@@ -83,11 +83,13 @@
     </Compile>
     <Compile Include="PageObjects\HomePage.cs" />
     <Compile Include="PageObjects\Insights.cs" />
+    <Compile Include="PageObjects\Page.cs" />
     <Compile Include="StepDefinitions\InsightsSteps.cs" />
     <Compile Include="TestCases\InsightsSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestDataAccess\ExcelDataAccess.cs" />
     <Compile Include="TestDataAccess\UserData.cs" />
+    <Compile Include="WrapperFactory\BrowserFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
