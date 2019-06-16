@@ -27,7 +27,8 @@ namespace CompanyWebsitePageFactory
             homePage.ClickOnNavInsights();
 
             var insights = new Insights(driver);
-            insights.SearchAndReset("Test");
+            insights.SearchAndReset();
+            //insights.SearchAndReset("Test");
 
         }
     }

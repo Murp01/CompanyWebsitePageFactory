@@ -26,13 +26,20 @@ namespace CompanyWebsitePageFactory.PageObjects
             PageFactory.InitElements(driver, this);
         }
 
-        public void SearchAndReset(String testName)
+        public void SearchAndReset()
         {
-            var userData = ExcelDataAccess.GetTestData(testName);
-            Input_Name.SendKeys(userData.SearchTerm);
-            //Input_Name.SendKeys("Linklaters");
-            //Btn_Reset.Click();
+            Input_Name.SendKeys("Linklaters");
+            Btn_Reset.Click();
         }
+
+        //public void SearchAndResetExcel(String testName)
+        //{
+        //    var userData = ExcelDataAccess.GetTestData(testName);
+        //    Input_Name.SendKeys(userData.SearchTerm);
+        //    Btn_Reset.Click();
+        //}
+        //This method I tried to implement integration with Excel but failed.  Comment
+        //code can be returned to when I tackle this again.
 
 
     }
