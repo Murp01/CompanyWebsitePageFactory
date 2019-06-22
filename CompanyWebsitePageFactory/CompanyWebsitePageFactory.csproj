@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserWrapper\BrowserFactory.cs" />
     <Compile Include="Features\SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +84,7 @@
     </Compile>
     <Compile Include="PageObjects\HomePage.cs" />
     <Compile Include="PageObjects\Insights.cs" />
+    <Compile Include="PageObjects\Page.cs" />
     <Compile Include="StepDefinitions\InsightsSteps.cs" />
     <Compile Include="TestCases\InsightsSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

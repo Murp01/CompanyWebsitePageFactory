@@ -20,11 +20,11 @@ namespace CompanyWebsitePageFactory.PageObjects
         [CacheLookup]
         public IWebElement Btn_Reset { get; set; }
 
-        public Insights(IWebDriver driver)
-        {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
-        }
+        //public Insights(IWebDriver driver)
+        //{
+            //this.driver = driver;
+            //PageFactory.InitElements(driver, this);
+        //}
 
         public void SearchAndReset()
         {
