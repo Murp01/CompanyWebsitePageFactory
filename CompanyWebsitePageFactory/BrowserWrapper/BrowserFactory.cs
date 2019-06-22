@@ -30,6 +30,7 @@ namespace CompanyWebsitePageFactory.BrowserWrapper
             }
         }
 
+
         public static void InitBrowser(string browserName)
         {
             switch (browserName)
