@@ -23,21 +23,9 @@ namespace CompanyWebsitePageFactory
             BrowserFactory.InitBrowser("Chrome");
             BrowserFactory.LoadApplication(ConfigurationManager.AppSettings["URL"]);
 
-
-            //IWebDriver driver = new ChromeDriver();
-            //driver.Url = ConfigurationManager.AppSettings["URL"];
-
             Page.Home.ClickOnNavInsights();
-            //Page.Insight.SearchAndReset();
-
-            //var homePage = new HomePage(driver);
-            //homePage.ClickOnNavInsights();
-
-            //var insights = new Insights(driver);
-            //insights.SearchAndReset();
-            //insights.SearchAndReset("Test");
-
-
+            Page.Insight.SearchAndReset();
+ 
         }
     }
 }

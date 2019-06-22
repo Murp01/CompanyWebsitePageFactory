@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CompanyWebsitePageFactory.BrowserWrapper;
+using CompanyWebsitePageFactory.PageObjects;
+using System;
+using System.Configuration;
 using TechTalk.SpecFlow;
 
 namespace CompanyWebsitePageFactory.StepDefinitions
@@ -8,17 +11,17 @@ namespace CompanyWebsitePageFactory.StepDefinitions
     public class InsightsSteps
     {
 
-
         [Given(@"I am on the Linklaters homepage")]
         public void GivenIAmOnTheLinklatersHomepage()
         {
-            ScenarioContext.Current.Pending();
+            BrowserFactory.InitBrowser("Chrome");
+            BrowserFactory.LoadApplication(ConfigurationManager.AppSettings["URL"]);
         }
         
         [Given(@"I click on Insights from the global navigation bar")]
         public void GivenIClickOnInsightsFromTheGlobalNavigationBar()
         {
-            ScenarioContext.Current.Pending();
+            Page.Home.ClickOnNavInsights();
         }
         
         [When(@"I enter a search term into Insights name search box")]
