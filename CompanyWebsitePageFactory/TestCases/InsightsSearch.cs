@@ -1,4 +1,5 @@
-﻿using CompanyWebsitePageFactory.PageObjects;
+﻿using CompanyWebsitePageFactory.BrowserWrapper;
+using CompanyWebsitePageFactory.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -19,18 +20,12 @@ namespace CompanyWebsitePageFactory
         [Test]
         public void Test()
         {
+            BrowserFactory.InitBrowser("Chrome");
+            BrowserFactory.LoadApplication(ConfigurationManager.AppSettings["URL"]);
 
-            IWebDriver driver = new ChromeDriver();
-            driver.Url = ConfigurationManager.AppSettings["URL"];
-
-            var homePage = new HomePage(driver);
-            homePage.ClickOnNavInsights();
-
-            var insights = new Insights(driver);
-            insights.SearchAndReset();
-            //insights.SearchAndReset("Test");
-
-
+            Page.Home.ClickOnNavInsights();
+            Page.Insight.SearchAndReset();
+ 
         }
     }
 }
