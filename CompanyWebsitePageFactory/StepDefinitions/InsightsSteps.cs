@@ -27,13 +27,13 @@ namespace CompanyWebsitePageFactory.StepDefinitions
         [When(@"I enter a search term into Insights name search box")]
         public void WhenIEnterASearchTermIntoInsightsNameSearchBox()
         {
-            ScenarioContext.Current.Pending();
+            Page.Insight.SearchAndReset();
         }
         
         [Then(@"all results containing the search box will appear")]
         public void ThenAllResultsContainingTheSearchBoxWillAppear()
         {
-            ScenarioContext.Current.Pending();
+
         }
     }
 }

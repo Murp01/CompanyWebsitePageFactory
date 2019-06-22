@@ -26,6 +26,11 @@ namespace CompanyWebsitePageFactory.PageObjects
         {
             get { return GetPage<Insights>(); }
         }
+
+        public static Common Common
+        {
+            get { return GetPage<Common>(); }
+        }
     }
 }
 

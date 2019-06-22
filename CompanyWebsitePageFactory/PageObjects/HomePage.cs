@@ -11,7 +11,7 @@ namespace CompanyWebsitePageFactory.PageObjects
 {
     class HomePage
     {
-        private IWebDriver driver;
+        //private IWebDriver driver;
 
         [FindsBy(How = How.XPath, Using = "//div[@class='header__navDesktop']//a[contains(text(),'Insights')]")]
         [CacheLookup]

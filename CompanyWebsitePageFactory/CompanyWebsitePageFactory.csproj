@@ -82,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
     </Compile>
+    <Compile Include="PageObjects\Common.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
     <Compile Include="PageObjects\Insights.cs" />
     <Compile Include="PageObjects\Page.cs" />
