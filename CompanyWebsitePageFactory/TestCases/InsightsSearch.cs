@@ -20,7 +20,7 @@ namespace CompanyWebsitePageFactory
         [Test]
         public void Test()
         {
-            BrowserFactory.InitBrowser("Firefox");
+            BrowserFactory.InitBrowser("Chrome");
             BrowserFactory.LoadApplication(ConfigurationManager.AppSettings["URL"]);
 
 

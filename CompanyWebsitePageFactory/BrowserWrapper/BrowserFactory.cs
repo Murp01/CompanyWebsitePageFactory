@@ -36,7 +36,7 @@ namespace CompanyWebsitePageFactory.BrowserWrapper
             switch (browserName)
             {
                 case "Firefox":
-                    if (Driver == null)
+                    if (driver == null)
                     {
                         driver = new FirefoxDriver();
                         Drivers.Add("Firefox", Driver);
@@ -44,17 +44,17 @@ namespace CompanyWebsitePageFactory.BrowserWrapper
                     break;
 
                 case "IE":
-                    if (Driver == null)
+                    if (driver == null)
                     {
-                        driver = new InternetExplorerDriver(@"C:\PathTo\IEDriverServer");
+                        driver = new InternetExplorerDriver(@"C:\Webdriver");
                         Drivers.Add("IE", Driver);
                     }
                     break;
 
                 case "Chrome":
-                    if (Driver == null)
+                    if (driver == null)
                     {
-                        driver = new ChromeDriver(@"C:\PathTo\CHDriverServer");
+                        driver = new ChromeDriver();
                         Drivers.Add("Chrome", Driver);
                     }
                     break;
